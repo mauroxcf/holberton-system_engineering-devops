@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+#script that evaluate if the file exist or its empty
+fileholbie="holbertonschool"
+if [ ! -e $fileholbie ]
+then
+    echo "holbertonschool file does not exist"
+    exit 0
+else
+    echo "holbertonschool file exists"
+fi
+
+if [ -s $fileholbie ]
+then
+    echo "holbertonschool file is not empty"
+else
+    echo "holbertonschool file is empty"
+fi
+
+if [ -f $fileholbie ]
+then
+    echo "holbertonschool is a regular file"
+fi
