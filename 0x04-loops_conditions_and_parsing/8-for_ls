@@ -2,4 +2,4 @@
 #script that print the files of the current directory
 var=$(ls)
 
-for i in $var; do echo "$i"; done
+for i in $var; do echo "$i"| cut -d "-" -f2; done
