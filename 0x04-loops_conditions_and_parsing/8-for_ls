@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#script that print the files of the current directory
 var=$(ls)
 
 for i in $var; do echo "$i"; done

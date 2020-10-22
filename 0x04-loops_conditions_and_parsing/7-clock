@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#script that print 12 hours of the day with minutes
 i=0
 
 while [ $i -lt 13 ]

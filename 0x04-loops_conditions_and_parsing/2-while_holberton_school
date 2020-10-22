@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#script that print holberschool 10 times with while
 i=0
 
 while [ $i -lt 10 ]
