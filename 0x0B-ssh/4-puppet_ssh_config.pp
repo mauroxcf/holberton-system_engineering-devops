@@ -2,7 +2,11 @@
 file_line {  'adding_no_passw_config':
   path      => '/etc/ssh/ssh_config',
   ensure    => true,
-  line      => '
-  PasswordAuthentication no\n
-  IdentityFile ~/.ssh/holberton',
+  line      => 'PasswordAuthentication no',
+}
+
+file_line {  'adding_no_passw_config':
+  path      => '/etc/ssh/ssh_config',
+  ensure    => true,
+  line      => 'IdentityFile ~/.ssh/holberton',
 }
