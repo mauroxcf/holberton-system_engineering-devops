@@ -2,7 +2,7 @@
 file {  'adding_no_passw_config':
   path      => '/etc/ssh/ssh_config',
   ensure    => true,
-  content   => 'Host *
-  PasswordAuthentication no
+  line      => '
+  PasswordAuthentication no\n
   IdentityFile ~/.ssh/holberton',
 }
