@@ -5,12 +5,12 @@ Add_subd () {
 #if [ "$2" == "lb-01" ] || [ "$2" == "web-02" ] || [ "$2" == "web-03" ] || [ "$2" == "www" ]
 if [ "$2" ];
 then
-    echo -n "the subdomain is $2"
+    echo -n "the subdomain $2 is a"
     dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk '{print " " $4 " record and points to " $5}' | tail -n 1
 else
     for i in www lb-01 web-01 web-02
     do
-        echo -n "the subdomain is $i"
+        echo -n "the subdomain $i is a"
         dig "$i.$1" | grep -A1 'ANSWER SECTION:' | awk '{print " " $4 " record and points to " $5}' | tail -n 1
     done
 fi
