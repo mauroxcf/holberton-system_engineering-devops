@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 #Script that display information about subdomains using awk and function
 Add_subd () {
-if [ "$2" == "lb-01" ] || [ "$2" == "web-02" ] || [ "$2" == "web-03" ]
+if [ "$2" == "lb-01" ] || [ "$2" == "web-02" ] || [ "$2" == "web-03" ] || [ "$2" == "www" ]
 then
     echo -n "the subdomain is $2"
-    dig "$1" | grep -A1 'ANSWER SECTION:' | awk '{print " is a " $4 " record and points to " $5}' | tail -n 1
+    dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk '{print " is a " $4 " record and points to " $5}' | tail -n 1
 else
     for i in www lb-01 web-01 web-02
     do
