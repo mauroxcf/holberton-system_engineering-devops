@@ -14,13 +14,19 @@ def top_ten(subreddit):
     and access key subscribers in the
     data key of the url.
     """
-    if subreddit is None:
-        return (0)
 
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     headers = {'user-agent': 'mauroxdev03'}
     limit = {'limit': '10'}
-    response = requests.get(url, headers=headers, params=limit)
-    for i in range(10):
-        titles = response.json().get("data", {}).get("children", ())[i].get("data", {}).get("title", "")
-        print(titles)
+    response = requests.get(
+        url, headers=headers, params=limit,
+        allow_redirects=False
+    )
+    if response.status_code == 200:
+        for i in range(10):
+            titles = response.json().get("data", {}).get(
+                "children", []
+            )[i].get("data", {}).get("title", "")
+            print(titles)
+    else:
+        print("None")
