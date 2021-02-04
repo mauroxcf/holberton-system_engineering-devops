@@ -1,13 +1,19 @@
 #!/usr/bin/python3
 """
-0-main
+module to get the subscribers info
 """
 import requests as reqs
-from sys import argv
 
 
 def number_of_subscribers(subreddit):
-    """ obtain number of subscribers"""
+    """ obtain number of subscribers
+    - url: that we pass the subreddit.
+    - headers: contain the user that
+    thats its making the request.
+    - make the request GET to the url
+    and access key subscribers in the
+    data key of the url.
+    """
     if subreddit is None:
         return 0
     else:
