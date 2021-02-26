@@ -1,7 +1,3 @@
-#Fix wp-settings.php increase the file open simultaly
-exec { 'fix-nginx-open-files':
-command => '/bin/sed -i \'s/ULIMIT="-n 15"/ULIMIT="-n 4096"/\' /etc/default/nginx',
-}
-# resetar nginx
-exec { 'restart nginex': command => '/usr/sbin/service nginx restart',
-}
+# Fix wp-settings.php increase the number of files open simultaneously
+exec { '/usr/bin/env sed -i s/15/1000/ /etc/default/nginx': }
+-> exec { '/usr/bin/env service nginx restart': }
