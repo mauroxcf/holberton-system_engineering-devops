@@ -1,17 +1,27 @@
-# Learning Shell Basics command pwd
+# 0x00. Shell, basics
 
+## Resources:books:
+Read or watch:
+* [What Is “The Shell”?](https://intranet.hbtn.io/rltoken/pn2_LGNuA1yFY7zy3CQmig)
+* [Navigation](https://intranet.hbtn.io/rltoken/Hh8elGgCpj--6othR7S7GQ)
+* [Looking Around](https://intranet.hbtn.io/rltoken/84xsZOempqy5I7ZkueeIsg)
+* [A Guided Tour](https://intranet.hbtn.io/rltoken/Jp1c4V3hJiGBuVzYCtnQKw)
+* [Manipulating Files](https://intranet.hbtn.io/rltoken/wFwFXKQmSpmxYyvHvCIC-Q)
+* [Working With Commands](https://intranet.hbtn.io/rltoken/Aq3NVLBhgnQS6NYtHI8i4w)
+* [Reading Man pages](https://intranet.hbtn.io/rltoken/RohkjGiQtMHgPfj0N_k1Bw)
+* [Keyboard shortcuts for Bash](https://intranet.hbtn.io/rltoken/0HvJ2B_wSl6Oyshcn-OHrg)
+* [LTS](https://wiki.ubuntu.com/LTS)
+* [Shebang](https://intranet.hbtn.io/rltoken/ketzZf-802Fb-mSGkyPa4w)
 
-the pwd command let you To find the name of the working directory, use the pwd command.
+---
+## Learning Objectives:bulb:
+What you should learn from this project:
 
-# example...here
+* What does RTFM mean?
+* What is a Shebang
 
+---
+---
 
-command pwd, type pwd to display the actual working directory
-```sh
-/home/vagrant/holberton-system_engineering-devops/0x00-shell_basic
-```
-
-```
-#### CREDITS
-
-HOLBERTON SCHOOL
+## Author
+* **Mauricio Contreras** - [mauroxcf](https://github.com/mauroxcf)
